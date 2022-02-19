@@ -34,8 +34,7 @@ function onCountryInput() {
 }
 
 function renderCountryList(countries) {
-    const markup = countries
-        .map(({ name, flags }) => {
+    const markup = countries.map(({ name, flags }) => {
         return `
             <li class="country-list__item">
                 <img class="country-list__flag" src="${flags.svg}" alt="Flag of ${name.official}" width = 30px height = 30px>
@@ -48,8 +47,7 @@ function renderCountryList(countries) {
 }
 
 function renderCountryInfo(countries) {
-    const markup = countries
-    .map(({ capital, population, languages }) => {
+    const markup = countries.map(({ capital, population, languages }) => {
         return `
         <ul class="country-info__list">
             <li class="country-info__item"><p><b>Capital: </b>${capital}</p></li>
